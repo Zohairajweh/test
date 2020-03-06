@@ -1,0 +1,40 @@
+.gray-text{
+color: mediumorchid;
+
+
+}
+.salmon-text{
+
+    font-size: 20px;
+}
+.data-list{
+
+color: green;
+font-size: 30px;
+
+}
+.indigo-text{
+
+    color: mediumslateblue;
+}
+.big-text{
+
+    font-size: 40px;
+}
+
+
+.data-table{
+
+font-size: 30px;
+color: lightblue;
+
+}
+.data-list-data{
+
+    color: red;
+
+}
+.className{
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 100px;
+}
