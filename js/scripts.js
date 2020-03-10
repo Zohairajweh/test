@@ -124,5 +124,91 @@ return dateString;
 
         }
         console.log('the current date is :\r\n'+currentDaystring());
+    //  let's review some conditions -related operators,,    
         
-        
+console.log(1==true);//true
+console.log('hello,world'==true);//false
+console.log(-137==true);//false
+console.log('test'=='test');//true
+console.log(36=='36');//true
+
+console.log(1===true);//false
+console.log(''==true);//false
+console.log(-137===true);//false
+console.log('test'==='test');//true
+console.log(36==='36');//false
+
+
+// hamburger menu 
+ var myNav =document.querySelector('nav');
+ var myNavButton =document.querySelector('.menu-button');
+ myNavButton.addEventListener('click',function( event ) {
+     //when clicked ,add/remove the "nav-open"class (in Html.)
+myNav.classList.toggle('nav-open')
+
+ });
+var myObject={
+name:'jerry',
+age: 61,
+hobbies:[
+    'snowboarding',
+    'action movies'
+]
+
+};
+
+console.log(myObject);
+console.log('object"name:'+myObject.name);
+console.log('object"age:'+myObject.age);
+console.log('object"hobbies:'+myObject.hobbies[0]+','+myObject.hobbies[1]);
+myObject.hobbies.push('programing');
+console.log('updated hobbies:');
+console.log(myObject.hobbies);
+
+var newObject={
+myNum: 5,updateNum: function(){
+
+    this.myNum=this.myNum +5;
+    return this.myNum
+}
+
+
+};
+function Person(name,age,hobbies){
+
+this.name =name;
+this.age =age;
+this.hobbies =hobbies;
+this.sayGoodbye=function(){
+document.body.innerHTML +=`
+<p>
+This is <strong>`+this.name+`</strong>, saying <em> Goofbye </em>!
+</p>
+`;
+
+};
+}
+var jerry =new Person('jerry',61,['snowboarding','programing'] );
+var sally =new Person('sally',36,['action movies','skydiving','teaching'] );
+
+Person.prototype.introduction=function(){
+var hobbiesString= '<ul>';
+this.hobbies.forEach(function(Value, index)
+ {
+    hobbiesString +='<li>'+ Value +'</li>';
+});
+hobbiesString+='</ul>';
+    document.body.innerHTML +=`
+    <h2>`+this.name + `</h2>
+<dl><!--my name is :`+this.name +`-->
+    <dt>age</dt>
+    <dd>`+this.age+`</dd>
+    <dt>Hobbies</dt>
+    <dd>`+hobbiesString+ `</dd>
+</dl>
+
+ `;
+}
+Person.prototype.nickname='';
+jerry.nickname='the big jare';
+sally.nickname='sallers'
